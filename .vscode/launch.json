@@ -6,10 +6,14 @@
     "configurations": [
 
         {
-            "name": "Inside Python Module",
+            "name": "Current File",
             "type": "debugpy",
             "request": "launch",
-            "module": "myapp.${fileBasenameNoExtension}",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "env": {"PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}"}
+            
         },
         {
             "name": "Reflex Debug",
@@ -19,6 +23,7 @@
             "args": [
                 "run"
             ],
+            "console": "integratedTerminal",
             "justMyCode": true
         }
     ]
