@@ -4,6 +4,7 @@ import reflex as rx
 
 from rxconfig import config
 
+from .database import Database
 
 class State(rx.State):
     """The app state."""
@@ -12,6 +13,8 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
+    d = Database()
+    print(d.con.cursor)
     # Welcome Page (Index)
     return rx.container(
         rx.color_mode.button(position="top-right"),

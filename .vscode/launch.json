@@ -6,11 +6,19 @@
     "configurations": [
 
         {
+            "name": "Inside Python Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "myapp.${fileBasenameNoExtension}",
+        },
+        {
             "name": "Reflex Debug",
             "type": "debugpy",
             "request": "launch",
             "module": "reflex",
-            "args": ["run"],
+            "args": [
+                "run"
+            ],
             "justMyCode": true
         }
     ]
