@@ -1,4 +1,5 @@
 {
     "terminal.integrated.env.osx": {"PYTHONPATH": "${workspaceFolder}/myapp:${workspaceFolder}/database"},
+    "terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFolder}\\myapp;${workspaceFolder}\\database"},
     "python.envFile": "${workspaceFolder}/.env",
 }
